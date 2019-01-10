@@ -31,8 +31,13 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         try {
             String urldisplay =  expandUrl(objects[0]) ;
             InputStream in = new URL(urldisplay).openStream();
+            if (in != null) {
+
+            }
             mIcon11 = BitmapFactory.decodeStream(in);
         } catch (Exception e) {
+            //TODO: Adicionar imagem default quando nao encontrar via url
+//            mIcon11 = BitmapFactory.decodeFile(getFilesD)
             Log.e("Error", e.getMessage());
             e.printStackTrace();
         }
