@@ -8,6 +8,7 @@ public class Ingreditent implements Serializable {
     private String name;
     private double price;
     private String image;
+    private int quantity;
 
     public Ingreditent() {
     }
@@ -53,5 +54,20 @@ public class Ingreditent implements Serializable {
                 ", price=" + price +
                 ", image='" + image + '\'' +
                 '}';
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public double totalValue(){
+        if(this.quantity > 0) {
+            return price * quantity;
+        }
+        return price;
     }
 }

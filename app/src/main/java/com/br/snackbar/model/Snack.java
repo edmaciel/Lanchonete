@@ -19,6 +19,8 @@ public class Snack implements Serializable {
     private String name;
     private String image;
     private List<Integer> ingredients;
+    private List<Ingreditent> ingredientsFull;
+    private String ingredientsString;
 
     public int getId() {
         return id;
@@ -60,5 +62,21 @@ public class Snack implements Serializable {
                 ", image='" + image + '\'' +
                 ", ingredients=" + ingredients +
                 '}';
+    }
+
+    public List<Ingreditent> getIngredientsFull() {
+        return ingredientsFull;
+    }
+
+    public void setIngredientsFull(List<Ingreditent> ingredientsFull) {
+        this.ingredientsFull = ingredientsFull;
+    }
+
+    public String getIngredientsString() {
+        return ingredientsString;
+    }
+
+    public void setIngredientsString(String ingredientsString) {
+        this.ingredientsString = ingredientsString;
     }
 }

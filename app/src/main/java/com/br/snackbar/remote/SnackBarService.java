@@ -24,10 +24,10 @@ public interface SnackBarService {
     Call<Snack> getSnackById(@Path("id") String id);
 
     @GET("ingrediente")
-    Call<Ingreditent> getIngredients(@Path("id") String id);
+    Call<List<Ingreditent>> getIngredients();
 
     @GET("ingrediente/de/{id}")
-    Call<List<Ingreditent>> getIngredientsBySnackId();
+    Call<List<Ingreditent>> getIngredientsBySnackId(@Path("id") Integer id);
 
     @GET("promocao")
     Call<List<Promotion>> getPromotion();
